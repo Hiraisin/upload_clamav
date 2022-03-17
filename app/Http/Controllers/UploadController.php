@@ -14,7 +14,7 @@ class UploadController extends Controller
     public function proses(Request $req)
     {
 
-        $rules['file']          = 'required|' . getClamav();
+        $rules['file']          = getClamav();
 
         $messages = [
             'required'      => ':attribute wajib diisi',
