@@ -36,3 +36,9 @@ function return_exc(Exception $ex)
 {
     return $ex->getMessage() . ' , File: ' . $ex->getFile() . ' , Line: ' . $ex->getLine();
 }
+
+// getstatusclamav
+function getClamav()
+{
+    return config('app.clamav') ? 'clamav' : '';
+}

@@ -9,12 +9,12 @@ class UploadController extends Controller
     public function index()
     {
         return view('upload.upload');
-        return getUrl();
     }
 
     public function proses(Request $req)
     {
-        $rules['file']          = 'required';
+
+        $rules['file']          = 'required|' . getClamav();
 
         $messages = [
             'required'      => ':attribute wajib diisi',

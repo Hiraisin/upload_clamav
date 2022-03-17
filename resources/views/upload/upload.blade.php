@@ -47,7 +47,9 @@
                     console.log(res)
                 }
             },
-            error: function(xhr) {}
+            error: function(xhr) {
+                console.log(xhr.responseJSON)
+            }
         })
     })
 </script>
